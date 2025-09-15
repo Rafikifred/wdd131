@@ -1,0 +1,24 @@
+/* temples-large.css (desktop view) */
+
+@media (min-width: 768px) {
+  #menu {
+    display: none;
+  }
+
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: none;
+    width: auto;
+  }
+
+  nav a {
+    border: none;
+    padding: 0.5rem 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
