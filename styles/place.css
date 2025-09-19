@@ -13,6 +13,7 @@ body {
   color: #333;
 }
 
+/* Header */
 header {
   text-align: center;
   padding: 1rem;
@@ -20,11 +21,43 @@ header {
   color: white;
 }
 
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 0.5rem 0;
+}
+
+/* ✅ Navigation bar */
+nav {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* Hero */
 .hero img {
   width: 100%;
   display: block;
 }
 
+/* Weather */
 .weather {
   background: var(--accent-color);
   padding: 1rem;
@@ -37,6 +70,7 @@ header {
   margin: 0.5rem auto;
 }
 
+/* Main content */
 main {
   max-width: 900px;
   margin: 1rem auto;
@@ -53,6 +87,7 @@ main {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
