@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WDD 131 – Dynamic Web Fundamentals – Rafiki Fred</title>
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals project by Rafiki Fred. Discover Rwanda: hero images, weather with windchill factor, and cultural highlights from the Land of a Thousand Hills. Demonstrates responsive design, accessibility, and JavaScript.">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals project by Rafiki Fred. Explore Rwanda, the Land of a Thousand Hills, with hero images, weather updates including windchill calculation, and cultural highlights. This responsive page demonstrates accessibility, SEO best practices, and JavaScript functionality.">
   <meta name="author" content="Rafiki Fred">
 
   <!-- Google Fonts -->
@@ -14,29 +14,24 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/place.css">
-
-  <!-- JavaScript -->
   <script src="scripts/place.js" defer></script>
 </head>
 <body>
   <header>
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
     <h1>Rafiki Fred</h1>
     <p>The land of a thousand hills</p>
 
     <nav>
       <a href="index.html">Home</a>
       <a href="temples.html">Temples</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    </nav>  
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <picture>
-      <source srcset="images/hero-large.jpg" media="(min-width: 1000px)" type="image/webp">
-      <source srcset="images/hero-medium.jpeg" media="(min-width: 600px)" type="image/webp">
+      <source srcset="images/hero-large.jpg" media="(min-width: 1000px)">
+      <source srcset="images/hero-medium.jpeg" media="(min-width: 600px)">
       <img src="images/hero-small.jpeg" alt="Landscape view of Rwanda">
     </picture>
   </section>
@@ -48,7 +43,7 @@
     <img src="images/weather.png" alt="Weather icon" class="weather-icon">
     <p>Temperature: <span id="temperature">8</span> °C</p>
     <p>Wind Speed: <span id="wind">10</span> km/h</p>
-    <p>Wind Chill: <span id="windchill">N/A</span></p>
+    <p>Wind Chill: <span id="windchill"></span></p>
   </section>
 
   <!-- Info Section -->
