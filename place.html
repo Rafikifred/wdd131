@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 131 – Country Page – Rwanda</title>
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Rwanda country page featuring hero images, weather section with windchill, and cultural highlights.">
-  <meta name="author" content="RAFIKI FRED">
+  <title>WDD 131 – Dynamic Web Fundamentals – Rafiki Fred</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals project by Rafiki Fred. Discover Rwanda: hero images, weather with windchill factor, and cultural highlights from the Land of a Thousand Hills. Demonstrates responsive design, accessibility, and JavaScript.">
+  <meta name="author" content="Rafiki Fred">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,23 +14,29 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/place.css">
+
+  <!-- JavaScript -->
   <script src="scripts/place.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Discover Rwanda</h1>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <h1>Rafiki Fred</h1>
     <p>The land of a thousand hills</p>
 
-     <nav>
-     <a href="index.html">Home</a>
-      </nav>  
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="temples.html">Temples</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <picture>
-      <source srcset="images/hero-large.jpg" media="(min-width: 1000px)">
-      <source srcset="images/hero-medium.jpeg" media="(min-width: 600px)">
+      <source srcset="images/hero-large.jpg" media="(min-width: 1000px)" type="image/webp">
+      <source srcset="images/hero-medium.jpeg" media="(min-width: 600px)" type="image/webp">
       <img src="images/hero-small.jpeg" alt="Landscape view of Rwanda">
     </picture>
   </section>
@@ -42,7 +48,7 @@
     <img src="images/weather.png" alt="Weather icon" class="weather-icon">
     <p>Temperature: <span id="temperature">8</span> °C</p>
     <p>Wind Speed: <span id="wind">10</span> km/h</p>
-    <p>Wind Chill: <span id="windchill"></span></p>
+    <p>Wind Chill: <span id="windchill">N/A</span></p>
   </section>
 
   <!-- Info Section -->
@@ -64,7 +70,7 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> RAFIKI FRED | Rwanda</p>
+    <p>&copy; <span id="currentyear"></span> Rafiki Fred | Rwanda</p>
     <p id="lastModified"></p>
   </footer>
 </body>
