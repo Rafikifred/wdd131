@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WDD 131 – Dynamic Web Fundamentals – RAFIKI FRED</title>
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Rwanda country page featuring responsive hero images, weather section with windchill, and cultural highlights. Built by RAFIKI FRED.">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals country page created by RAFIKI FRED. This page showcases Rwanda with responsive hero images in WebP format, a weather section with windchill calculation, cultural highlights, and a dynamic footer using JavaScript.">
   <meta name="author" content="RAFIKI FRED">
 
   <!-- Google Fonts -->
@@ -18,25 +18,20 @@
 </head>
 <body>
   <header>
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
     <h1>RAFIKI FRED</h1>
-    <p>The land of a thousand hills</p>
-
+    <p>The land of a thousand hills – Discover Rwanda</p>
     <nav>
       <a href="index.html">Home</a>
-      <a href="place.html">Rwanda</a>
-      <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a>
-      <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
-      <a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a>
-      <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a>
+      <a href="temples.html">Temples</a>
+      <a href="place.html">Country</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <picture>
-      <source srcset="images/hero-large.jpg" type="image/webp" media="(min-width: 1000px)">
-      <source srcset="images/hero-medium.jpeg" type="image/webp" media="(min-width: 600px)">
+      <source srcset="images/hero-large.jpg" media="(min-width: 1000px)" type="image/webp">
+      <source srcset="images/hero-medium.jpeg" media="(min-width: 600px)" type="image/webp">
       <img src="images/hero-small.jpeg" alt="Landscape view of Rwanda">
     </picture>
   </section>
@@ -44,10 +39,8 @@
   <!-- Weather Section -->
   <section class="weather">
     <h2 id="weather">Weather</h2>
-    <!-- SVG for mobile only -->
-    <img src="images/weather.png" alt="Weather icon" class="weather-icon mobile-only">
-    <!-- Desktop pseudo-element adds emoticon after h2 -->
-
+    <!-- Mobile SVG Icon -->
+    <img src="images/weather.png" alt="Weather icon" class="weather-icon">
     <p>Temperature: <span id="temperature">8</span> °C</p>
     <p>Wind Speed: <span id="wind">10</span> km/h</p>
     <p>Wind Chill: <span id="windchill"></span></p>
