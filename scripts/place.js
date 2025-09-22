@@ -1,33 +1,24 @@
 // place.js
 
-// Footer: current year and last modified
+// ✅ Display current year
 document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+// ✅ Display last modified date
 document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
-// Wind Chill Calculation
+// ✅ Windchill calculation
 function calculateWindChill(tempC, windKmh) {
-  // Convert Celsius to Fahrenheit and km/h to mph
-  let tempF = (tempC * 9) / 5 + 32;
-  let windMph = windKmh / 1.609;
-
-  // Apply formula if valid
-  if (tempF <= 50 && windMph > 3) {
-    let windChillF =
-      35.74 +
-      0.6215 * tempF -
-      35.75 * Math.pow(windMph, 0.16) +
-      0.4275 * tempF * Math.pow(windMph, 0.16);
-
-    // Convert back to Celsius (rounded)
-    return Math.round(((windChillF - 32) * 5) / 9);
-  } else {
-    return "N/A";
-  }
+  // Formula uses Celsius & km/h → one line return
+  return (13.12 + 0.6215 * tempC - 11.37 * Math.pow(windKmh, 0.16) + 0.3965 * tempC * Math.pow(windKmh, 0.16)).toFixed(1);
 }
 
-// Get values from HTML
-const temp = parseFloat(document.getElementById("temperature").textContent);
-const wind = parseFloat(document.getElementById("wind").textContent);
+// Static values from your HTML
+const temperature = parseFloat(document.getElementById("temperature").textContent);
+const windSpeed = parseFloat(document.getElementById("wind").textContent);
 
-// Calculate and display
-document.getElementById("windchill").textContent = calculateWindChill(temp, wind);
+// ✅ Conditions for valid wind chill
+if (temperature <= 10 && windSpeed > 4.8) {
+  document.getElementById("windchill").textContent = `${calculateWindChill(temperature, windSpeed)} °C`;
+} else {
+  document.getElementById("windchill").textContent = "N/A";
+}

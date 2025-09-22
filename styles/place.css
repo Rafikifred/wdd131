@@ -1,104 +1,143 @@
-/* Global styles */
+/* Base styles */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 header {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
+  background-color: #006400;
+  color: #fff;
   padding: 1rem;
+  text-align: center;
 }
 
 header h1 {
-  margin: 0.5rem 0;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header p {
+  margin: 0.3rem 0;
 }
 
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
   margin-top: 0.5rem;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  margin: 0 0.75rem;
+  font-weight: 700;
 }
 
 nav a:hover {
-  color: #f39c12;
+  text-decoration: underline;
 }
 
+/* Hero section */
 .hero img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Cards */
+/* Cards layout */
 main {
   max-width: 900px;
-  margin: 1rem auto;
+  margin: 2rem auto;
   padding: 0 1rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .card {
-  background: #f4f4f4;
-  padding: 1rem;
+  background: #fff;
+  padding: 1.5rem;
   border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-top: 0;
 }
 
 /* Weather section */
 .weather {
-  text-align: center;
-  background: #eaf2f8;
+  max-width: 600px;
+  margin: 2rem auto;
   padding: 1rem;
-  margin: 1rem;
+  background: #e6f3e6;
   border-radius: 8px;
+  text-align: center;
 }
 
+.weather h2::after {
+  content: " ⛅"; /* Emoticon only in larger view */
+  display: none;
+}
+
+/* Mobile SVG / Desktop PNG */
 .weather-icon {
   width: 60px;
+  height: 60px;
+  margin: 1rem auto;
   display: block;
-  margin: 0.5rem auto;
+}
+
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
 }
 
 /* Footer */
 footer {
+  background: #006400;
+  color: #fff;
   text-align: center;
   padding: 1rem;
-  background: #2c3e50;
-  color: white;
   margin-top: 2rem;
 }
 
-/* Larger screens */
+/* Media queries */
 @media (min-width: 768px) {
-  nav {
-    justify-content: flex-end;
-    margin-right: 2rem;
-  }
-
   main {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 
-  /* Hide SVG and use pseudo-element for weather */
-  .weather-icon {
+  .weather h2::after {
+    display: inline;
+  }
+
+  .mobile-only {
     display: none;
   }
 
+  .desktop-only {
+    display: block;
+  }
+  /* Mobile-only SVG */
+.mobile-only {
+  display: block;
+}
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+  /* Desktop pseudo-element adds ☀️ or ⛅ after Weather */
   #weather::after {
     content: " ⛅";
     font-size: 1.5rem;
-    margin-left: 0.3rem;
+    margin-left: 8px;
   }
+}
+
 }

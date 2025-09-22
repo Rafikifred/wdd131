@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WDD 131 – Dynamic Web Fundamentals – RAFIKI FRED</title>
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Country page about Rwanda featuring hero images, weather with windchill calculation, and cultural highlights.">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Rwanda country page featuring responsive hero images, weather section with windchill, and cultural highlights. Built by RAFIKI FRED.">
   <meta name="author" content="RAFIKI FRED">
 
   <!-- Google Fonts -->
@@ -18,21 +18,25 @@
 </head>
 <body>
   <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
     <h1>RAFIKI FRED</h1>
-    <p>The land of a thousand hills – Rwanda</p>
+    <p>The land of a thousand hills</p>
 
     <nav>
       <a href="index.html">Home</a>
-      <a href="temples.html">Temple Album</a>
       <a href="place.html">Rwanda</a>
+      <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a>
+      <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+      <a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a>
+      <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <picture>
-      <source srcset="images/hero-large.jpg" media="(min-width: 1000px)">
-      <source srcset="images/hero-medium.jpeg" media="(min-width: 600px)">
+      <source srcset="images/hero-large.jpg" type="image/webp" media="(min-width: 1000px)">
+      <source srcset="images/hero-medium.jpeg" type="image/webp" media="(min-width: 600px)">
       <img src="images/hero-small.jpeg" alt="Landscape view of Rwanda">
     </picture>
   </section>
@@ -40,8 +44,10 @@
   <!-- Weather Section -->
   <section class="weather">
     <h2 id="weather">Weather</h2>
-    <!-- SVG icon (mobile view only) -->
-    <img src="images/weather.png" alt="Weather icon" class="weather-icon">
+    <!-- SVG for mobile only -->
+    <img src="images/weather.png" alt="Weather icon" class="weather-icon mobile-only">
+    <!-- Desktop pseudo-element adds emoticon after h2 -->
+
     <p>Temperature: <span id="temperature">8</span> °C</p>
     <p>Wind Speed: <span id="wind">10</span> km/h</p>
     <p>Wind Chill: <span id="windchill"></span></p>
