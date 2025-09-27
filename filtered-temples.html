@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 – Filtered Temples – RAFIKI FRED</title>
+  <meta name="description" content="Filtered temple album with dynamic JavaScript rendering, lazy-loaded images, and filtering options.">
+  <meta name="author" content="RAFIKI FRED">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+</head>
+<body>
+  <header>
+    <h1>Temple Picture Album</h1>
+    <nav>
+      <button id="home">Home</button>
+      <button id="old">Old</button>
+      <button id="new">New</button>
+      <button id="large">Large</button>
+      <button id="small">Small</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="temple-container">
+      <!-- Temple cards will be injected here dynamically -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> RAFIKI FRED | WDD131</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>

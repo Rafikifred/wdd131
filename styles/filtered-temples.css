@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background: #4a148c; /* deep purple */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav button {
+  background: white;
+  border: 2px solid #4a148c;
+  color: #4a148c;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #4a148c;
+  color: white;
+}
+
+/* Temple Container */
+.temple-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Temple Cards */
+.temple-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.temple-card:hover {
+  transform: translateY(-5px);
+}
+
+.temple-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+/* Temple Details */
+.temple-card p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.temple-card p strong {
+  color: #4a148c; /* purple labels */
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Temple Image */
+.temple-card img {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer {
+  background: #4a148c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+/* Filter Buttons */
+nav {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav button {
+  background: white;
+  border: 2px solid #4a148c;
+  color: #4a148c;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #4a148c;
+  color: white;
+}
+
+/* Active Button */
+nav button.active {
+  background: #4a148c;
+  color: white;
+  box-shadow: 0 0 10px rgba(74, 20, 140, 0.6);
+  transform: scale(1.05);
+}
+/* Base Temple Card */
+.temple-card {
+  background: white;
+  border: 2px solid #ccc;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  max-width: 350px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.temple-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+/* Old temples */
+.temple-card.old-temple {
+  border-color: #795548; /* brown */
+  background: #fdf6f0;
+}
+
+/* Large temples */
+.temple-card.large-temple {
+  border-color: #1565c0; /* blue */
+  background: #e3f2fd;
+}
+
+/* Small temples */
+.temple-card.small-temple {
+  border-color: #ef6c00; /* orange */
+  background: #fff3e0;
+}
+
