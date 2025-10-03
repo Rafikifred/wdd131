@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <meta name="description" content="WDD 131 - Product Review Form for practicing forms, validation, and localStorage.">
+  <meta name="author" content="RAFIKI FRED">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form method="get" action="review.html">
+      
+      <!-- Product Name -->
+      <label for="product">Product Name <span class="required">*</span></label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <!-- JS will populate options here -->
+      </select>
+
+      <!-- Rating -->
+      <fieldset>
+        <legend>Overall Rating <span class="required">*</span></legend>
+        <label><input type="radio" name="rating" value="1" required> 1 ☆</label>
+        <label><input type="radio" name="rating" value="2"> 2 ☆☆</label>
+        <label><input type="radio" name="rating" value="3"> 3 ☆☆☆</label>
+        <label><input type="radio" name="rating" value="4"> 4 ☆☆☆☆</label>
+        <label><input type="radio" name="rating" value="5"> 5 ☆☆☆☆☆</label>
+      </fieldset>
+
+      <!-- Date Installed -->
+      <label for="installDate">Date of Installation <span class="required">*</span></label>
+      <input type="date" id="installDate" name="installDate" required>
+
+      <!-- Features -->
+      <fieldset>
+        <legend>Useful Features (check all that apply)</legend>
+        <label><input type="checkbox" id="feature1" name="features" value="Durability"> Durability</label>
+        <label><input type="checkbox" id="feature2" name="features" value="Design"> Design</label>
+        <label><input type="checkbox" id="feature3" name="features" value="Performance"> Performance</label>
+        <label><input type="checkbox" id="feature4" name="features" value="Warranty"> Warranty</label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <label for="reviewText">Written Review</label>
+      <textarea id="reviewText" name="reviewText" rows="5"></textarea>
+
+      <!-- User Name -->
+      <label for="username">Your Name</label>
+      <input type="text" id="username" name="username">
+
+      <!-- Submit -->
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> RAFIKI FRED</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
